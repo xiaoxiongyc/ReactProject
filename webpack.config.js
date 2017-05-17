@@ -7,7 +7,7 @@ var WebpackDevServer = require("webpack-dev-server");
 
 module.exports = {
     context:  __dirname + "/src",
-    entry:"./js/index.js",
+    entry:"./js/root.js",
     module:{
         loaders:[
             {
@@ -18,11 +18,11 @@ module.exports = {
                     presets: ['es2015','react']
                 }
             },
-            //下面是使用 ant-design 的配置文件
+            //下面是使用 ant-design 的配置文件 不再使用 ?modules 因为样式是全局的 不再需要局部样式
             {
                 test: /\.css$/,
                 //modules  模块化配置
-                loader: 'style-loader!css-loader?modules'
+                loader: 'style-loader!css-loader'
             },
         ]
     },
