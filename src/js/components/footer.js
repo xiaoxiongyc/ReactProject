@@ -12,7 +12,7 @@ export default class ComponentFooter extends React.Component {
     // render方法 ：用于解析类的输出
     // return 中可以是JSX语法
     render(){
-        console.log(footerCss);
+
         return (
             <footer className={footerCss.miniFooter}>
                 <h1>这里是页脚，一般放置版权信息。</h1>

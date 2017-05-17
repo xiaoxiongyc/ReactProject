@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom';
 import BodyChild from './bodychild';
 import ReactMixin from 'react-mixin';
 import MixinLog from './mixins';
+//AntDesign
+import { Input } from 'antd';
 
 // 创建一个类(组件名称的第一个字母一定要大写) 并暴露给外部 继承自 React.component
 export default class BodyIndex extends React.Component {
@@ -47,11 +49,12 @@ export default class BodyIndex extends React.Component {
         return (
             <div>
                 <h2>页面的主体内容</h2>
-                <p>接受到的父页面的属性：userid：{this.props.userid} ；username： {this.props.username} {this.state.age}</p>
-                {/*bind(this)  因为click时 this指向的是input的DOM 所以要绑定到当前组件*/}
-                <input id="submitButton" ref="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this, 99)}/>
-                {/*{...this.props} 将父页面(就是当前页面)的props传递给子页面(BodyChild)*/}
-                <BodyChild  {...this.props} handleChildValueChange={this.handleChildValueChange.bind(this)}/>
+                {/*<p>接受到的父页面的属性：userid：{this.props.userid} ；username： {this.props.username} {this.state.age}</p>*/}
+                {/*/!*bind(this)  因为click时 this指向的是input的DOM 所以要绑定到当前组件*!/*/}
+                {/*<Input placeholder="Basic usage" />*/}
+                {/*<Input id="submitButton" ref="submitButton" type="button" value="提交" onClick={this.changeUserInfo.bind(this, 99)}/>*/}
+                {/*/!*{...this.props} 将父页面(就是当前页面)的props传递给子页面(BodyChild)*!/*/}
+                {/*<BodyChild  {...this.props} handleChildValueChange={this.handleChildValueChange.bind(this)}/>*/}
             </div>
         );
     }
